@@ -3,148 +3,118 @@
 /* Import de la police Fredoka depuis Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 
-/* Style de base pour le corps de la page */
+
 body {
-  background-color: #e4edff; /* Couleur de fond bleu clair */
-  font-family: "Fredoka", sans-serif; /* Police Fredoka appliquée */
-  margin: 17vh 3vw 0; /* Marge: 17% haut, 3% côtés, 0 bas */
+  margin: 5em 1em 0 1em;
+  font-family: "Fredoka", sans-serif;
+  background-color: #e4edff;
+}
+.navigation-bar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: #e4edff;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
-/* Style pour l'en-tête fixe en haut de la page */
-.header {
-  display: flex; /* Disposition en flexbox */
-  justify-content: center; /* Centrage horizontal */
-  align-items: center; /* Centrage vertical */
-  position: fixed; /* Position fixe pour rester visible au scroll */
-  right: 0; /* Alignement à droite */
-  left: 0; /* Alignement à gauche */
-  top: 0; /* Alignement en haut */
-  height: 12%; /* Hauteur de 12% de la fenêtre */
-  font-weight: 550; /* Épaisseur de police semi-gras */
-  background-color: #e4edff; /* Fond bleu clair */
-  z-index: 100; /* Priorité d'affichage élevée */
+.navigation-item {
+  font-size: 65%;
+  font-weight: 550;
 }
 
-/* Conteneur du logo */
-.logo {
-  margin: 0 1vw 0 3vw; /* Marges: 0 haut, 1% droite, 0 bas, 3% gauche */
-  transition: all 0.2s ease; /* Transition douce pour les animations */
+.navigation-item a {
+  text-decoration: none;
 }
 
-/* Image du logo */
-.logo-img {
-  margin: 0.5vh 0 0 -1vw; /* Marges spécifiques pour le positionnement */
-  width: 2.2vw; /* Largeur de 2.2% de la fenêtre */
-  background-color: #0051ff; /* Fond bleu */
-  padding: 0.5em; /* Espacement interne */
-  border-radius: 100%; /* Forme circulaire */
-  transition: all 0.2s ease; /* Transition pour les effets hover */
-  cursor: pointer; /* Curseur pointer pour indiquer le clic */
-  min-width: 25px; /* Largeur minimale pour la responsivité */
+
+.logo img {
+  margin-left: 0.5em;
+  width: 45px;   /* taille fixe plus petite */
+  height: 45px;  /* garder un carré pour le rond */
+  background-color: #0051ff;
+  padding: 5px;   /* petit espace autour */
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: contain; /* ajuste l’image dans le cercle */
 }
 
-/* Effet au survol du logo */
-.logo-img:hover {
-  background-color: #5b8fff; /* Changement de couleur au survol */
+
+.accueil a {
+  color: #874ce4;
 }
 
-/* Style du bouton ILIA */
-.ILIA-btn {
-  font-weight: 550; /* Police semi-grasse */
-  color: white; /* Texte blanc */
-  background-color: #874ce4; /* Fond violet */
-  padding: 5em; /* Espacement interne (à vérifier - semble excessif) */
-  border-width: 0; /* Pas de bordure */
-  border-radius: 20em; /* Bords très arrondis */
-  padding: 2.5vh 1.5vw; /* Padding vertical et horizontal */
-  min-width: 50px; /* Largeur minimale */
-  transition: all 0.2s ease; /* Transition pour les effets */
-  cursor: pointer; /* Curseur pointer */
+.ressources a {
+  color: #2157cb;
 }
 
-/* Effet au survol du bouton ILIA */
-.ILIA-btn:hover {
-  background-color: #e4edff; /* Fond devient bleu clair */
-  color: #874ce4; /* Texte devient violet */
-  border-color: #874ce4; /* Bordure violette */
-  border-width: 1px; /* Épaisseur de bordure */
+.club-ilia a {
+  color: #874ce4;
 }
 
-/* Style des éléments de navigation */
-.header-items {
-  font-size: 100%; /* Taille de police relative */
-  flex: 1; /* Prend l'espace disponible équitablement */
-  cursor: pointer; /* Curseur pointer */
-  transition: all 0.2s ease; /* Transition pour les animations */
+.ILIAFOLIO a {
+  color: #2157cb;
 }
 
-/* Style des liens dans la navigation */
-.header-items a {
-  text-decoration: none; /* Supprime le soulignement des liens */
+.contact a {
+  margin-right: 0.5em;
+  color: #874ce4;
 }
 
-/* Effet au survol des éléments de navigation */
-.header-items:hover {
-  font-size: 110%; /* Légère augmentation de taille */
+.accueil:hover {
+  font-size: 110%;
 }
 
-/* Style spécifique pour l'élément Accueil */
-.accueil {
-  color: #874ce4; /* Couleur violette */
-  transition: color 0.2s; /* Transition pour changement de couleur */
+.ressources:hover {
+  font-size: 110%;
 }
 
-/* Style spécifique pour l'élément Ressources */
-.ressources {
-  color: #2157cb; /* Couleur bleue */
-  transition: color 0.2s; /* Transition pour changement de couleur */
+.club-ilia :hover {
+  font-size: 110%;
 }
 
-/* Style spécifique pour l'élément Club ILIA */
-.club-ilia {
-  color: #874ce4; /* Couleur violette */
-  transition: color 0.2s; /* Transition pour changement de couleur */
+.ILIAFOLIO :hover {
+  font-size: 110%;
+}
+.contact :hover {
+  font-size: 110%;
 }
 
-/* Style spécifique pour l'élément Contact */
-.contact {
-  color: #2157cb; /* Couleur bleue */
-  transition: color 0.2s; /* Transition pour changement de couleur */
-}
-
-/* Style des liens visités pour Accueil */
 .accueil a:visited {
-  color: #874ce4; /* Garde la couleur violette même visité */
+  color: #874ce4;
 }
 
-/* Style des liens visités pour Ressources */
 .ressources a:visited {
-  color: #2157cb; /* Garde la couleur bleue même visité */
-  transition: color 0.2s; /* Transition pour changement de couleur */
+  color: #2157cb;
 }
 
-/* Style des liens visités pour Club ILIA */
-.club-ilia a:visited {
-  color: #874ce4; /* Garde la couleur violette même visité */
-  transition: color 0.2s; /* Transition pour changement de couleur */
+.club-ilia a :visited {
+  color: #874ce4;
 }
 
-/* Style des liens visités pour Contact */
+.ILIAFOLIO a :visited {
+  color: #2157cb;
+}
+
 .contact a:visited {
-  color: #2157cb; /* Garde la couleur bleue même visité */
-  transition: color 0.2s; /* Transition pour changement de couleur */
+  color: #874ce4;
 }
 
-/* Media query pour les écrans mobiles (< 600px) */
-@media (max-width: 600px) {
-  .header-items {
-    font-size: 80%; /* Réduction de taille sur mobile */
-    transition: all 0.2s ease; /* Transition pour l'animation */
-  }
-  .header-items:hover {
-    font-size: 90%; /* Augmentation moins importante au survol */
+@media (min-width: 768px) {
+  /* .ilia-btn button {
+    opacity: 1;
+  } */
+  .navigation-item {
+    font-size: 1em;
   }
 }
+
+
+
 
 /* Style des titres h1 */
 h1 {
@@ -168,7 +138,7 @@ h1 {
   border-radius: 50px; /* Coins arrondis */
   background-color: blueviolet; /* Fond violet */
   color: white; /* Texte blanc */
-  font-size: 1.5em; /* Taille de police */
+  font-size: 1.3em; /* Taille de police */
   display: flex; /* Flexbox pour centrage */
   justify-content: center; /* Centrage horizontal */
   align-items: center; /* Centrage vertical */
@@ -185,11 +155,11 @@ h1 {
 .rectangleborder2 {
   border: 3px solid blueviolet; /* Bordure violette */
   width: 400px; /* Largeur fixe */
-  height: 350px; /* Hauteur fixe */
+  height: 300px; /* Hauteur fixe */
   border-radius: 50px; /* Coins arrondis */
   background-color: blueviolet; /* Fond violet */
   color: white; /* Texte blanc */
-  font-size: 1.5em; /* Taille de police */
+  font-size: 1.3em; /* Taille de police */
   padding: 20px; /* Espacement interne */
   display: flex; /* Flexbox pour centrage */
   justify-content: center; /* Centrage horizontal */
@@ -271,7 +241,7 @@ h1 {
   border-radius: 50px; /* Coins arrondis */
   background-color: #bddaff; /* Fond bleu très clair */
   color: #37406d; /* Texte bleu foncé */
-  font-size: 2em; /* Grande taille de police */
+  font-size: 1em; /* Grande taille de police */
   font-weight: bold; /* Texte en gras */
   display: flex; /* Flexbox pour centrage */
   justify-content: center; /* Centrage horizontal */
@@ -292,14 +262,14 @@ h1 {
 
 /* Style du titre des projets */
 .Titre-Projet {
-  font-size: 2em; /* Grande taille de police */
+  font-size: 1.3em; /* Grande taille de police */
   font-weight: bold; /* Texte en gras */
   text-align: center; /* Centrage du texte */
 }
 
 /* Style de la description des projets */
 .Description-Projet {
-  font-size: 1.4em; /* Taille de police */
+  font-size: 1em; /* Taille de police */
   color: black; /* Texte noir */
 }
 
@@ -329,7 +299,7 @@ h1 {
 
 /* Espacement entre les sections */
 section {
-  margin-bottom: 200px; /* Grande marge basse */
+  margin-bottom: 400px; /* Grande marge basse */
 }
 
 /* ===================== */
