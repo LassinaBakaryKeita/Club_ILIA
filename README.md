@@ -85,5 +85,3 @@ To propose improvements or add new features:
 
 
 
-## 📁 Project Structure
-
